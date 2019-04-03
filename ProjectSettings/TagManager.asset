@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlatformTile
+  - Soap
+  - Mud
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Platform
   - 
   - 
   - 
@@ -40,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 199283691
+    locked: 0
+  - name: Platform
+    uniqueID: 2783628471
+    locked: 0
+  - name: Player
+    uniqueID: 197598557
+    locked: 0
+  - name: Mud-Soap
+    uniqueID: 1114851373
     locked: 0
