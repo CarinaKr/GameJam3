@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             jumpCount = 0;
         }
+        
 
         if(Input.GetButtonDown("Jump"+playerMoveNumber)&&jumpCount<maxJumpCount)
         {

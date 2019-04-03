@@ -7,6 +7,8 @@ TagManager:
   - PlatformTile
   - Soap
   - Mud
+  - Collectable
+  - LargeObject
   layers:
   - Default
   - TransparentFX
@@ -47,8 +49,14 @@ TagManager:
   - name: Background
     uniqueID: 199283691
     locked: 0
+  - name: BackgroundOverlay
+    uniqueID: 1320852163
+    locked: 0
   - name: Platform
     uniqueID: 2783628471
+    locked: 0
+  - name: ChargingStation
+    uniqueID: 2710799013
     locked: 0
   - name: Player
     uniqueID: 197598557
