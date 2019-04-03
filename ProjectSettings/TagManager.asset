@@ -64,3 +64,6 @@ TagManager:
   - name: Mud-Soap
     uniqueID: 1114851373
     locked: 0
+  - name: Collectable
+    uniqueID: 3942557637
+    locked: 0

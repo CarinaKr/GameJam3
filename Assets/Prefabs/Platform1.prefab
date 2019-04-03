@@ -176,6 +176,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3289256225993379244, guid: b01e576ac79c0954fa31d1ea0f7663f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5a4f072fad3281c40b253f6ba882c563,
+        type: 3}
+    - target: {fileID: 6342899379606463640, guid: b01e576ac79c0954fa31d1ea0f7663f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 64f983d860da62f40871d85021accfd9,
+        type: 3}
+    - target: {fileID: 2164237320187746671, guid: b01e576ac79c0954fa31d1ea0f7663f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fa50fb0f448e3cc4aa63a23ab868f6ce,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b01e576ac79c0954fa31d1ea0f7663f8, type: 3}
 --- !u!4 &7967530995560746738 stripped
@@ -326,6 +344,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3289256225993379244, guid: b01e576ac79c0954fa31d1ea0f7663f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b5f5cc91d2959846aacc3aa6d582d72,
+        type: 3}
+    - target: {fileID: 6342899379606463640, guid: b01e576ac79c0954fa31d1ea0f7663f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eb39173facf7b5043837c43ca2596b8a,
+        type: 3}
+    - target: {fileID: 2164237320187746671, guid: b01e576ac79c0954fa31d1ea0f7663f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5805c8864252f304485ea5e2941de9af,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b01e576ac79c0954fa31d1ea0f7663f8, type: 3}
 --- !u!4 &7967530996703904299 stripped
