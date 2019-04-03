@@ -52,14 +52,15 @@ public class PlayerManager : MonoBehaviour
     {
         if(obj==Objects.TILE)
         {
-            points += pointsForTile;
+            //points += pointsForTile;
             playerEnergy.DeductTileEnergy();
         }
         else if(obj==Objects.LARGE_OBJECT)
         {
-            points += pointsForLargeObject;
+            //points += pointsForLargeObject;
             playerEnergy.DeductLargeObjectEnergy();
             hasCollectable = false;
         }
+        GameManager.self.CheckPoints();
     }
 }

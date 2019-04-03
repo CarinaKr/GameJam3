@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Update()
     {
+        if (GameManager.self.isGameOver)
+            return;
 
         if(isGrounded)
         {
@@ -42,6 +44,9 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void FixedUpdate () {
+
+        if (GameManager.self.isGameOver)
+            return;
 
         Move(Input.GetAxis("Horizontal"+playerMoveNumber)*speed);
 	}
