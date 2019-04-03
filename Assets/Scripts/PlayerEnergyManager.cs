@@ -11,8 +11,9 @@ public class PlayerEnergyManager : MonoBehaviour
     [SerializeField] private GameObject[] energySymbols;
     [SerializeField] private float chargePerSecond;
 
-    public float _energy;
+    private float _energy;
     private float energyPerSymbol;
+
 
     private void Start()
     {

@@ -6,11 +6,27 @@ public class PlayerManager : MonoBehaviour
 {
     public PlatformTile.State state;
 
+    public float points { get; set; }
+
     [SerializeField] private PoolBehaviour pool;
     [SerializeField] private CollectableSpawn spawnCollectables;
     [SerializeField] [Range (0,1)] public int playerNumber;
-    [SerializeField] GameObject collectableSymbol;
+    [SerializeField] private GameObject collectableSymbol;
+    [SerializeField] private float pointsForTile, pointsForLargeObject;
+
     private bool _hasCollectable;
+    private PlayerEnergyManager playerEnergy;
+
+    public enum Objects
+    {
+        TILE,
+        LARGE_OBJECT
+    }
+
+    private void Start()
+    {
+        playerEnergy = GetComponent<PlayerEnergyManager>();
+    }
 
     public bool hasCollectable
     {
@@ -32,4 +48,18 @@ public class PlayerManager : MonoBehaviour
         spawnCollectables.SpawnCollectable();
     }
     
+    public void ChangeObject(Objects obj)
+    {
+        if(obj==Objects.TILE)
+        {
+            points += pointsForTile;
+            playerEnergy.DeductTileEnergy();
+        }
+        else if(obj==Objects.LARGE_OBJECT)
+        {
+            points += pointsForLargeObject;
+            playerEnergy.DeductLargeObjectEnergy();
+            hasCollectable = false;
+        }
+    }
 }

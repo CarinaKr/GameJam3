@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerCollisionManager : MonoBehaviour
 {
-    
 
+    private GameManager gameManager;
     private PlayerManager playerManager;
     private PlayerEnergyManager playerEnergy;
     private PlayerMovement playerMovement;
@@ -19,6 +19,7 @@ public class PlayerCollisionManager : MonoBehaviour
         playerManager = GetComponent<PlayerManager>();
         playerMovement = GetComponent<PlayerMovement>();
         playerEnergy = GetComponent<PlayerEnergyManager>();
+        gameManager = GameManager.self;
         playerNumber = playerManager.playerNumber;
         
     }
@@ -54,8 +55,7 @@ public class PlayerCollisionManager : MonoBehaviour
                 if (tile.state != playerManager.state)
                 {
                     tile.SetState(playerManager.state);
-                    playerEnergy.DeductLargeObjectEnergy();
-                    playerManager.hasCollectable = false;
+                    playerManager.ChangeObject(PlayerManager.Objects.LARGE_OBJECT);
                 }
             }
         }
@@ -73,7 +73,7 @@ public class PlayerCollisionManager : MonoBehaviour
                 if(tile.state!=playerManager.state)
                 {
                     tile.SetState(playerManager.state);
-                    playerEnergy.DeductTileEnergy();
+                    playerManager.ChangeObject(PlayerManager.Objects.TILE);
                 }
             }
         }
@@ -83,6 +83,7 @@ public class PlayerCollisionManager : MonoBehaviour
     {
         if(collision.transform.tag=="Player")
         {
+            gameManager.GameOver();
             Debug.Log("Game Over. Players ran into each other!");
         }
     }
