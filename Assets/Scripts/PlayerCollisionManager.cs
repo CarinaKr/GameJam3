@@ -83,7 +83,7 @@ public class PlayerCollisionManager : MonoBehaviour
     {
         if(collision.transform.tag=="Player")
         {
-            gameManager.GameOver();
+            gameManager.GameOver(GameManager.GameOverCause.BOTH_LOSE);
             Debug.Log("Game Over. Players ran into each other!");
         }
     }
