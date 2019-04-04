@@ -16,11 +16,13 @@ public class PlayerMovement : MonoBehaviour {
     private int jumpCount;
     private int playerMoveNumber;
     private PlayerManager playerManager;
+    private Animator animator;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         playerManager = GetComponent<PlayerManager>();
+        animator = GetComponent<Animator>();
         playerMoveNumber = playerManager.playerNumber;
         jumpCount = 0;
     }
@@ -33,6 +35,7 @@ public class PlayerMovement : MonoBehaviour {
         if(isGrounded)
         {
             jumpCount = 0;
+            animator.SetTrigger("IsLanded");
         }
         
 
@@ -41,6 +44,11 @@ public class PlayerMovement : MonoBehaviour {
             Jump(jumpHeight);
             jumpCount++;
         }
+
+        if (rb.velocity.y < 0)
+            animator.SetTrigger("IsLanding");
+        else if (rb.velocity.y > 0)
+            animator.SetTrigger("IsJumping");
     }
 
     void FixedUpdate () {
