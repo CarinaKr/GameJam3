@@ -48,19 +48,19 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(GameOverCause gameOverCause)
     {
-        //switch(gameOverCause)
-        //{
-        //    case GameOverCause.BOTH_LOSE:
-        //        audioSource.clip = bothLoseClip;
-        //        break;
-        //    case GameOverCause.MUD_WINS:
-        //        audioSource.clip = musWinsClip;
-        //        break;
-        //    case GameOverCause.SOAP_WINS:
-        //        audioSource.clip = soapWinsClip;
-        //        break;
-        //}
-        //audioSource.Play();
+        switch (gameOverCause)
+        {
+            case GameOverCause.BOTH_LOSE:
+                audioSource.clip = bothLoseClip;
+                break;
+            case GameOverCause.MUD_WINS:
+                audioSource.clip = musWinsClip;
+                break;
+            case GameOverCause.SOAP_WINS:
+                audioSource.clip = soapWinsClip;
+                break;
+        }
+        audioSource.Play();
         isGameOver = true;
         winner = gameOverCause;
         StartCoroutine("LoadGameOverScene");

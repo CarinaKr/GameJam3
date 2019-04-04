@@ -34,6 +34,8 @@ public class PlayerEnergyManager : MonoBehaviour
         {
             energy += chargePerSecond * smootingTime;
             yield return new WaitForSeconds(smootingTime);
+            if (energy >= maxEnergy)
+                audioSource.loop = false;
         }
         audioSource.loop = false;
     }

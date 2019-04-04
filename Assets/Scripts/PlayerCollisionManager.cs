@@ -42,7 +42,7 @@ public class PlayerCollisionManager : MonoBehaviour
         if ((collision.tag == "Mud" && playerManager.state == PlatformTile.State.MUD) || (collision.tag == "Soap" && playerManager.state == PlatformTile.State.SOAP))
         {
             playerEnergy.isCharging = false;
-            playerEnergy.StopCoroutine("Charge");
+            //playerEnergy.StopCoroutine("Charge");
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
