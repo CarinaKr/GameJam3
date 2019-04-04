@@ -35,7 +35,11 @@ public class PlayerMovement : MonoBehaviour {
         if(isGrounded)
         {
             jumpCount = 0;
-            animator.SetTrigger("IsLanded");
+            if(animator!=null)
+            {
+                animator.SetTrigger("IsLanded");
+                animator.ResetTrigger("IsLanding");
+            }
         }
         
 
@@ -45,10 +49,18 @@ public class PlayerMovement : MonoBehaviour {
             jumpCount++;
         }
 
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y < 0 && animator!=null)
+        {
             animator.SetTrigger("IsLanding");
-        else if (rb.velocity.y > 0)
+            animator.ResetTrigger("IsJumping");
+            animator.ResetTrigger("IsLanded");
+        }
+        else if (rb.velocity.y > 0 && animator != null && !isGrounded)
+        {
             animator.SetTrigger("IsJumping");
+            animator.ResetTrigger("IsLanding");
+            animator.ResetTrigger("IsLanded");
+        }
     }
 
     void FixedUpdate () {
