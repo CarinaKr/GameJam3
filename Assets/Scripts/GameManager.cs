@@ -1,92 +1,74 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager self;
 
+    public GameOverCause winner { get; private set; }
     public bool isGameOver { get; private set; }
 
-    [SerializeField] PlayerManager playerMud, playerSoap;
-    [SerializeField] private float maxTime;
-    [SerializeField] private Text timeText;
-    [SerializeField] private float pointsForTile, pointsForLargeObject;
-    [SerializeField] [Range(0, 100)] int winPercentage;
-    [SerializeField] private PlatformTile[] tiles, largerObjects;
-    [SerializeField] private Transform knobImage;
+    [SerializeField] private float delayBeforeGameOver;
+    [SerializeField] private AudioClip musWinsClip, soapWinsClip, bothLoseClip;
 
-    private float timeLeft;
-    private float[] pointsCounter; //0=idle, 1=mud, 2=soap
-    private float maxPoints;
-    private float maxPointsNeeded;
+    private AudioSource audioSource;
+
+    public enum GameOverCause
+    {
+        MUD_WINS,
+        SOAP_WINS,
+        BOTH_LOSE
+    }
 
     private void Awake()
     {
         if (self == null)
+        {
             self = this;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            audioSource = GetComponent<AudioSource>();
+        }
 
         if (self != this)
+        {
             Destroy(gameObject);
+            return;
+        }
 
         DontDestroyOnLoad(gameObject);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        pointsCounter = new float[3];
-        timeLeft = maxTime;
-        maxPoints = (tiles.Length*pointsForTile) + (largerObjects.Length*pointsForLargeObject);
-        maxPointsNeeded = maxPoints * ((float)winPercentage / 100);
+        if (scene.buildIndex == 0)
+            isGameOver = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameOver(GameOverCause gameOverCause)
     {
-        if (isGameOver)
-            return;
-
-        timeLeft -= Time.deltaTime;
-        timeText.text = timeLeft.ToString("F0");
-        if (timeLeft <= 0)
-            GameOver();
-
-
-    }
-
-    public void CheckPoints()
-    {
-        for(int i=0;i<pointsCounter.Length;i++)
+        switch (gameOverCause)
         {
-            pointsCounter[i] = 0;
+            case GameOverCause.BOTH_LOSE:
+                audioSource.clip = bothLoseClip;
+                break;
+            case GameOverCause.MUD_WINS:
+                audioSource.clip = musWinsClip;
+                break;
+            case GameOverCause.SOAP_WINS:
+                audioSource.clip = soapWinsClip;
+                break;
         }
-
-        for(int i=0;i<tiles.Length;i++)
-        {
-            pointsCounter[(int)tiles[i].state]+=pointsForTile;
-        }
-        for(int j=0;j<largerObjects.Length;j++)
-        {
-            pointsCounter[(int)tiles[j].state] += pointsForLargeObject;
-        }
-
-        float mudPoints = (pointsCounter[(int)PlatformTile.State.MUD] / maxPointsNeeded) * 90;
-        float soapPoints = (pointsCounter[(int)PlatformTile.State.SOAP] / maxPointsNeeded) * 90;
-
-        knobImage.rotation = Quaternion.identity;
-        knobImage.Rotate(Vector3.back, mudPoints*(-1));
-        knobImage.Rotate(Vector3.back, soapPoints);
-
-        if (pointsCounter[(int)PlatformTile.State.MUD] >= maxPointsNeeded)
-            GameOver();
-        else if (pointsCounter[(int)PlatformTile.State.SOAP] >= maxPointsNeeded)
-            GameOver();
-    }
-
-    public void GameOver()
-    {
+        audioSource.Play();
         isGameOver = true;
+        winner = gameOverCause;
+        StartCoroutine("LoadGameOverScene");
+    }
+
+    private IEnumerator LoadGameOverScene()
+    {
+        yield return new WaitForSeconds(delayBeforeGameOver);
+        SceneManager.LoadScene(2);
     }
 }

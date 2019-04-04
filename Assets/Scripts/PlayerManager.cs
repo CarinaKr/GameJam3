@@ -12,10 +12,12 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private CollectableSpawn spawnCollectables;
     [SerializeField] [Range (0,1)] public int playerNumber;
     [SerializeField] private GameObject collectableSymbol;
-    [SerializeField] private float pointsForTile, pointsForLargeObject;
+    //[SerializeField] private float pointsForTile, pointsForLargeObject;
+    [SerializeField] private AudioClip pickUpCollectable;
 
     private bool _hasCollectable;
     private PlayerEnergyManager playerEnergy;
+    private AudioSource audioSource;
 
     public enum Objects
     {
@@ -26,6 +28,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         playerEnergy = GetComponent<PlayerEnergyManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public bool hasCollectable
@@ -43,6 +46,8 @@ public class PlayerManager : MonoBehaviour
     
     public void PickUpCollectable(GameObject collectable)
     {
+        audioSource.clip = pickUpCollectable;
+        audioSource.Play();
         hasCollectable = true;
         pool.ReleaseObject(collectable);
         spawnCollectables.SpawnCollectable();
@@ -52,15 +57,13 @@ public class PlayerManager : MonoBehaviour
     {
         if(obj==Objects.TILE)
         {
-            //points += pointsForTile;
             playerEnergy.DeductTileEnergy();
         }
         else if(obj==Objects.LARGE_OBJECT)
         {
-            //points += pointsForLargeObject;
             playerEnergy.DeductLargeObjectEnergy();
             hasCollectable = false;
         }
-        GameManager.self.CheckPoints();
+        PointsManager.self.ShowPoints();
     }
 }
