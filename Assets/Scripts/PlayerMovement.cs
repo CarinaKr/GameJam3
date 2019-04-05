@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour {
             Vector3 startPosition = transform.position + offset;
             float distance = maxGroundDistance / 3;
             Debug.DrawRay(startPosition, Vector2.down * distance, Color.green);
-            if (Physics2D.Raycast(startPosition, Vector2.down * maxGroundDistance, distance, LayerMask.GetMask("Platform")) && Mathf.Abs(rb.velocity.y) <=0.001f)
+            if (Physics2D.Raycast(startPosition, Vector2.down * maxGroundDistance, distance, LayerMask.GetMask("Platform")) /*&& Mathf.Abs(rb.velocity.y) <=0.01f*/)
             {
                 _isGrounded = true;
                 return true;
