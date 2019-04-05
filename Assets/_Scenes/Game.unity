@@ -560,12 +560,6 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 72f204851fd7c454f96762f85003d656, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57dd0957918f5448934b209768af765, type: 3}
---- !u!1 &206571891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1693197600962533777, guid: d57dd0957918f5448934b209768af765,
-    type: 3}
-  m_PrefabInstance: {fileID: 206571890}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &216226249 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3423233465862960526, guid: d865c50230d615c49999d40f6bde2fe9,
@@ -659,7 +653,7 @@ PrefabInstance:
         type: 3}
       propertyPath: collectableSymbol
       value: 
-      objectReference: {fileID: 206571891}
+      objectReference: {fileID: 901489749}
     - target: {fileID: 6706249312742913837, guid: dab942fb75e5e49c299d8f5cf47a6a41,
         type: 3}
       propertyPath: playerNumber
@@ -670,7 +664,18 @@ PrefabInstance:
       propertyPath: energySymbols.Array.size
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3975072474461164996, guid: dab942fb75e5e49c299d8f5cf47a6a41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706249312742913838, guid: dab942fb75e5e49c299d8f5cf47a6a41,
+        type: 3}
+      propertyPath: speed
+      value: 150
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6706249312742914003, guid: dab942fb75e5e49c299d8f5cf47a6a41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dab942fb75e5e49c299d8f5cf47a6a41, type: 3}
 --- !u!1 &261508694
 GameObject:
@@ -1721,6 +1726,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxTryCounter: 100
   poolBehaviour: {fileID: 419936840}
+--- !u!1 &901489749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3975072474461164996, guid: dab942fb75e5e49c299d8f5cf47a6a41,
+    type: 3}
+  m_PrefabInstance: {fileID: 236206157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &903990207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,7 +2067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMud: {fileID: 0}
   playerSoap: {fileID: 2262131776013966497}
-  maxTime: 30
+  maxTime: 120
   timeText: {fileID: 1836520839}
   pointsForTile: 1
   pointsForLargeObject: 2
@@ -2802,7 +2813,7 @@ PrefabInstance:
     - target: {fileID: 2968410377727149934, guid: 20c73662fbd34944db5d73a551ed9f82,
         type: 3}
       propertyPath: maxTime
-      value: 30
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2968410377727149933, guid: 20c73662fbd34944db5d73a551ed9f82,
         type: 3}
@@ -2943,13 +2954,19 @@ PrefabInstance:
     - target: {fileID: 1944165578218337757, guid: d865c50230d615c49999d40f6bde2fe9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6340332501699805574, guid: d865c50230d615c49999d40f6bde2fe9,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7967530995560746739, guid: d865c50230d615c49999d40f6bde2fe9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5a4f072fad3281c40b253f6ba882c563,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d865c50230d615c49999d40f6bde2fe9, type: 3}
 --- !u!1001 &7527805834512066124
@@ -3063,6 +3080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LargeObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 3322726642494891431, guid: aa74f732f4528f147ab59a712115567d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8470205349651850242, guid: aa74f732f4528f147ab59a712115567d,
         type: 3}

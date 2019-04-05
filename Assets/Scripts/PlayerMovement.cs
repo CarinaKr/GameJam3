@@ -9,7 +9,9 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float maxGroundDistance;
     [SerializeField] private int maxJumpCount = 2;
 
-    private bool _isGrounded;
+    public bool _isGrounded;
+    public float _inputX;
+
     private bool atWall;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -61,6 +63,11 @@ public class PlayerMovement : MonoBehaviour {
             animator.ResetTrigger("IsLanding");
             animator.ResetTrigger("IsLanded");
         }
+
+        _inputX = Input.GetAxis("Horizontal" + playerMoveNumber);
+        Debug.Log(_inputX);
+        //Move(Input.GetAxis("Horizontal" + playerMoveNumber) * speed*Time.deltaTime);
+        Move(_inputX * speed * Time.deltaTime);
     }
 
     void FixedUpdate () {
@@ -68,7 +75,7 @@ public class PlayerMovement : MonoBehaviour {
         if (GameManager.self.isGameOver)
             return;
 
-        Move(Input.GetAxis("Horizontal"+playerMoveNumber)*speed);
+        
 	}
 
     public void Move(float inputX)
@@ -91,8 +98,10 @@ public class PlayerMovement : MonoBehaviour {
             Debug.DrawRay(startPosition, Vector2.down * distance, Color.green);
             if (Physics2D.Raycast(startPosition, Vector2.down * maxGroundDistance, distance, LayerMask.GetMask("Platform")) && Mathf.Abs(rb.velocity.y) <=0.001f)
             {
+                _isGrounded = true;
                 return true;
             }
+            _isGrounded = false;
             return false;
         }
     }

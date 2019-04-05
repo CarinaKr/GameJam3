@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverManager : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer background;
+    [SerializeField] Image background;
     [SerializeField] Sprite mudWins, soapWins, bothLose;
     [SerializeField] float delayBeforeContinue;
     [SerializeField] private GameObject  creditsScreen;
