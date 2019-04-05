@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         _inputX = Input.GetAxis("Horizontal" + playerMoveNumber);
-        Debug.Log(_inputX);
         //Move(Input.GetAxis("Horizontal" + playerMoveNumber) * speed*Time.deltaTime);
         Move(_inputX * speed * Time.deltaTime);
     }
@@ -83,9 +82,9 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = new Vector2(inputX, rb.velocity.y);
     }
     
-    public void Jump(float heigt)
+    public void Jump(float height)
     {
-        rb.velocity = new Vector2(rb.velocity.x,heigt);
+        rb.velocity = new Vector2(rb.velocity.x,height);
     }
 
     public bool isGrounded
