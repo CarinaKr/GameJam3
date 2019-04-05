@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private int maxJumpCount = 2;
     [SerializeField] private float minYThreshhold, yReappearPosition;
 
-    public bool _isGrounded;
-    public float _inputX;
+    private bool _isGrounded;
+    private float _inputX;
 
     private bool atWall;
     private Rigidbody2D rb;
