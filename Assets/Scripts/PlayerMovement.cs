@@ -8,19 +8,24 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float jumpHeight;
     [SerializeField] private float maxGroundDistance;
     [SerializeField] private int maxJumpCount = 2;
+    [SerializeField] private float minYThreshhold, yReappearPosition;
 
-    private bool _isGrounded;
+    public bool _isGrounded;
+    public float _inputX;
+
     private bool atWall;
     private Rigidbody2D rb;
     private Vector2 movement;
     private int jumpCount;
     private int playerMoveNumber;
     private PlayerManager playerManager;
+    private Animator animator;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         playerManager = GetComponent<PlayerManager>();
+        animator = GetComponent<Animator>();
         playerMoveNumber = playerManager.playerNumber;
         jumpCount = 0;
     }
@@ -33,6 +38,11 @@ public class PlayerMovement : MonoBehaviour {
         if(isGrounded)
         {
             jumpCount = 0;
+            if(animator!=null)
+            {
+                animator.SetTrigger("IsLanded");
+                animator.ResetTrigger("IsLanding");
+            }
         }
         
 
@@ -41,6 +51,28 @@ public class PlayerMovement : MonoBehaviour {
             Jump(jumpHeight);
             jumpCount++;
         }
+
+        if (rb.velocity.y < 0 && animator!=null)
+        {
+            animator.SetTrigger("IsLanding");
+            animator.ResetTrigger("IsJumping");
+            animator.ResetTrigger("IsLanded");
+        }
+        else if (rb.velocity.y > 0 && animator != null && !isGrounded)
+        {
+            animator.SetTrigger("IsJumping");
+            animator.ResetTrigger("IsLanding");
+            animator.ResetTrigger("IsLanded");
+        }
+
+        _inputX = Input.GetAxis("Horizontal" + playerMoveNumber);
+        //Move(Input.GetAxis("Horizontal" + playerMoveNumber) * speed*Time.deltaTime);
+        Move(_inputX * speed * Time.deltaTime);
+
+        if(transform.position.y < minYThreshhold)
+        {
+            transform.position = new Vector2(transform.position.x,yReappearPosition);
+        }
     }
 
     void FixedUpdate () {
@@ -48,7 +80,7 @@ public class PlayerMovement : MonoBehaviour {
         if (GameManager.self.isGameOver)
             return;
 
-        Move(Input.GetAxis("Horizontal"+playerMoveNumber)*speed);
+        
 	}
 
     public void Move(float inputX)
@@ -56,9 +88,9 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = new Vector2(inputX, rb.velocity.y);
     }
     
-    public void Jump(float heigt)
+    public void Jump(float height)
     {
-        rb.velocity = new Vector2(rb.velocity.x,heigt);
+        rb.velocity = new Vector2(rb.velocity.x,height);
     }
 
     public bool isGrounded
@@ -69,10 +101,12 @@ public class PlayerMovement : MonoBehaviour {
             Vector3 startPosition = transform.position + offset;
             float distance = maxGroundDistance / 3;
             Debug.DrawRay(startPosition, Vector2.down * distance, Color.green);
-            if (Physics2D.Raycast(startPosition, Vector2.down * maxGroundDistance, distance, LayerMask.GetMask("Platform")) && Mathf.Abs(rb.velocity.y) <=0.001f)
+            if (Physics2D.Raycast(startPosition, Vector2.down * maxGroundDistance, distance, LayerMask.GetMask("Platform")) /*&& Mathf.Abs(rb.velocity.y) <=0.01f*/)
             {
+                _isGrounded = true;
                 return true;
             }
+            _isGrounded = false;
             return false;
         }
     }

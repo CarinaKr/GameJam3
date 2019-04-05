@@ -88,7 +88,7 @@ public class PointsManager : MonoBehaviour
         }
         for (int j = 0; j < largerObjects.Length; j++)
         {
-            pointsCounter[(int)tiles[j].state] += pointsForLargeObject;
+            pointsCounter[(int)largerObjects[j].state] += pointsForLargeObject;
         }
     }
 
