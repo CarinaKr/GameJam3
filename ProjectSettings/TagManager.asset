@@ -52,12 +52,6 @@ TagManager:
   - name: Walls
     uniqueID: 690316867
     locked: 0
-  - name: Player
-    uniqueID: 197598557
-    locked: 0
-  - name: BackgroundOverlay
-    uniqueID: 1320852163
-    locked: 0
   - name: Platform
     uniqueID: 2783628471
     locked: 0
@@ -66,6 +60,12 @@ TagManager:
     locked: 0
   - name: Mud-Soap
     uniqueID: 1114851373
+    locked: 0
+  - name: Player
+    uniqueID: 197598557
+    locked: 0
+  - name: BackgroundOverlay
+    uniqueID: 1320852163
     locked: 0
   - name: Collectable
     uniqueID: 3942557637

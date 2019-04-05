@@ -74,14 +74,7 @@ public class PlayerMovement : MonoBehaviour {
             transform.position = new Vector2(transform.position.x,yReappearPosition);
         }
     }
-
-    void FixedUpdate () {
-
-        if (GameManager.self.isGameOver)
-            return;
-
-        
-	}
+    
 
     public void Move(float inputX)
     {
