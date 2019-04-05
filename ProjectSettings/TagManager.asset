@@ -52,6 +52,9 @@ TagManager:
   - name: Walls
     uniqueID: 690316867
     locked: 0
+  - name: Player
+    uniqueID: 197598557
+    locked: 0
   - name: BackgroundOverlay
     uniqueID: 1320852163
     locked: 0
@@ -60,9 +63,6 @@ TagManager:
     locked: 0
   - name: ChargingStation
     uniqueID: 2710799013
-    locked: 0
-  - name: Player
-    uniqueID: 197598557
     locked: 0
   - name: Mud-Soap
     uniqueID: 1114851373

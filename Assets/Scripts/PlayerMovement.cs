@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float jumpHeight;
     [SerializeField] private float maxGroundDistance;
     [SerializeField] private int maxJumpCount = 2;
+    [SerializeField] private float minYThreshhold, yReappearPosition;
 
     public bool _isGrounded;
     public float _inputX;
@@ -67,6 +68,11 @@ public class PlayerMovement : MonoBehaviour {
         _inputX = Input.GetAxis("Horizontal" + playerMoveNumber);
         //Move(Input.GetAxis("Horizontal" + playerMoveNumber) * speed*Time.deltaTime);
         Move(_inputX * speed * Time.deltaTime);
+
+        if(transform.position.y < minYThreshhold)
+        {
+            transform.position = new Vector2(transform.position.x,yReappearPosition);
+        }
     }
 
     void FixedUpdate () {
