@@ -49,6 +49,9 @@ TagManager:
   - name: Background
     uniqueID: 199283691
     locked: 0
+  - name: Walls
+    uniqueID: 690316867
+    locked: 0
   - name: BackgroundOverlay
     uniqueID: 1320852163
     locked: 0
