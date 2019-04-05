@@ -668,7 +668,7 @@ PrefabInstance:
     - target: {fileID: 6706249312742913832, guid: dab942fb75e5e49c299d8f5cf47a6a41,
         type: 3}
       propertyPath: energySymbols.Array.size
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab942fb75e5e49c299d8f5cf47a6a41, type: 3}
@@ -2056,7 +2056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMud: {fileID: 0}
   playerSoap: {fileID: 2262131776013966497}
-  maxTime: 120
+  maxTime: 30
   timeText: {fileID: 1836520839}
   pointsForTile: 1
   pointsForLargeObject: 2
@@ -2799,6 +2799,11 @@ PrefabInstance:
       propertyPath: knobImage
       value: 
       objectReference: {fileID: 903990208}
+    - target: {fileID: 2968410377727149934, guid: 20c73662fbd34944db5d73a551ed9f82,
+        type: 3}
+      propertyPath: maxTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2968410377727149933, guid: 20c73662fbd34944db5d73a551ed9f82,
         type: 3}
       propertyPath: m_LocalPosition.x
