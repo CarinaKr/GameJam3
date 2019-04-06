@@ -1,15 +1,12 @@
 fileFormatVersion: 2
-guid: b404f656fd6ef4ce4befc8b8c8e4bb65
+guid: b97b2fc443c234ac09165ce5ca53668a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mud_idle_0
-    21300002: mud_idle_1
-    21300004: mud_idle_2
-    21300006: mud_idle_3
-    21300008: mud_idle_4
-    21300010: mud_idle_5
-    21300012: mud_idle_6
-    21300014: mud_idle_7
+    21300000: soapChargingStation_0
+    21300002: soapChargingStation_1
+    21300004: soapChargingStation_2
+    21300006: soapChargingStation_3
+    21300008: soapChargingStation_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -81,12 +78,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 12
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
@@ -114,13 +111,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mud_idle_0
+      name: soapChargingStation_0
       rect:
         serializedVersion: 2
-        x: 209
-        y: 2256
-        width: 601
-        height: 610
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,19 +125,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d29dae68e0e04d8080f863a88b55581
+      spriteID: 2901a284146a949bab821652e1cac7e2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mud_idle_1
+      name: soapChargingStation_1
       rect:
         serializedVersion: 2
-        x: 1238
-        y: 2243
-        width: 592
-        height: 635
+        x: 512
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d42a11b9e660548c7b76858d0dc06b7f
+      spriteID: 2c285521731f44214a8b0c89efd1fa2d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mud_idle_2
+      name: soapChargingStation_2
       rect:
         serializedVersion: 2
-        x: 2253
-        y: 2235
-        width: 606
-        height: 649
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,19 +165,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80689b092b44f401391a99c0728d7d08
+      spriteID: 819638888812b41e0a1484d9987e86bb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mud_idle_3
+      name: soapChargingStation_3
       rect:
         serializedVersion: 2
-        x: 203
-        y: 1208
-        width: 629
-        height: 665
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,19 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21e60a54ba37c4a5ca3dd52624bda35f
+      spriteID: 878d7188f7b9946558efe60ce9574563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mud_idle_4
+      name: soapChargingStation_4
       rect:
         serializedVersion: 2
-        x: 1217
-        y: 1215
-        width: 644
-        height: 645
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,67 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e3cf66faaba0479a83ffef249dd87fd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mud_idle_5
-      rect:
-        serializedVersion: 2
-        x: 2258
-        y: 1220
-        width: 607
-        height: 647
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8745459186474016bae32f12ab09aaf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mud_idle_6
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 203
-        width: 610
-        height: 638
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a75983115c2f4749b4a11a273d8e5dc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mud_idle_7
-      rect:
-        serializedVersion: 2
-        x: 1241
-        y: 200
-        width: 593
-        height: 638
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94b3869c11e2c4cd98eed6803c24f0d7
+      spriteID: 2c3b2ffa04f624f399ce28322e245ae9
       vertices: []
       indices: 
       edges: []
@@ -276,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c2d5232509e8d4cf28d2f6e0e8358f44
+    spriteID: 4f7ec9bb339c14a0ca0efc5b39a53741
     vertices: []
     indices: 
     edges: []
