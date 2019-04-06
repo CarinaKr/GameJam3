@@ -114,10 +114,10 @@ TextureImporter:
       name: mudChargingStation_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 507
-        width: 327
-        height: 497
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38f5ebf3439c44550929955a0966aecf
+      spriteID: 250aff22862e1499a856de2dfc8b937c
       vertices: []
       indices: 
       edges: []
@@ -134,10 +134,10 @@ TextureImporter:
       name: mudChargingStation_1
       rect:
         serializedVersion: 2
-        x: 583
-        y: 500
-        width: 327
-        height: 504
+        x: 514
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df217fda8ae0f415c8fdd0fdb5b4b040
+      spriteID: 1ccc517c78cb84d9c966799b301e6482
       vertices: []
       indices: 
       edges: []
@@ -154,10 +154,10 @@ TextureImporter:
       name: mudChargingStation_2
       rect:
         serializedVersion: 2
-        x: 1095
-        y: 516
-        width: 330
-        height: 488
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fc107dcf7a734bfba003544cddefdb6
+      spriteID: ee9cbe1c2e7844f4785aa1f0a8643e60
       vertices: []
       indices: 
       edges: []
@@ -174,10 +174,10 @@ TextureImporter:
       name: mudChargingStation_3
       rect:
         serializedVersion: 2
-        x: 74
+        x: 0
         y: 0
-        width: 328
-        height: 492
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5d128cfb5bef4b9c9ecc2a8ac921715
+      spriteID: 4a8607ecf3fd349b188b2fa779820ed1
       vertices: []
       indices: 
       edges: []
@@ -194,10 +194,10 @@ TextureImporter:
       name: mudChargingStation_4
       rect:
         serializedVersion: 2
-        x: 582
-        y: 0
-        width: 333
-        height: 492
+        x: 512
+        y: 2
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182fe9f6d647d421abb0d67ff3f048eb
+      spriteID: 331b428509cda4eff9d4149918b8dad3
       vertices: []
       indices: 
       edges: []

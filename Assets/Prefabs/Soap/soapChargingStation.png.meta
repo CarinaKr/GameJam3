@@ -114,10 +114,10 @@ TextureImporter:
       name: soapChargingStation_0
       rect:
         serializedVersion: 2
-        x: 73
-        y: 507
-        width: 327
-        height: 497
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f99ef84dc60f444a68a8858a4a9f9768
+      spriteID: 2901a284146a949bab821652e1cac7e2
       vertices: []
       indices: 
       edges: []
@@ -134,10 +134,10 @@ TextureImporter:
       name: soapChargingStation_1
       rect:
         serializedVersion: 2
-        x: 583
-        y: 500
-        width: 327
-        height: 504
+        x: 512
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f2a6597ca05446c9a3a3fe070534a19
+      spriteID: 2c285521731f44214a8b0c89efd1fa2d
       vertices: []
       indices: 
       edges: []
@@ -154,10 +154,10 @@ TextureImporter:
       name: soapChargingStation_2
       rect:
         serializedVersion: 2
-        x: 1095
-        y: 516
-        width: 330
-        height: 488
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd7b9eaec3c694984bbf3861546aa11d
+      spriteID: 819638888812b41e0a1484d9987e86bb
       vertices: []
       indices: 
       edges: []
@@ -174,10 +174,10 @@ TextureImporter:
       name: soapChargingStation_3
       rect:
         serializedVersion: 2
-        x: 74
+        x: 0
         y: 0
-        width: 328
-        height: 492
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f63fcf2ed5bd34a08a6fb1214c969c6e
+      spriteID: 878d7188f7b9946558efe60ce9574563
       vertices: []
       indices: 
       edges: []
@@ -194,10 +194,10 @@ TextureImporter:
       name: soapChargingStation_4
       rect:
         serializedVersion: 2
-        x: 582
+        x: 512
         y: 0
-        width: 333
-        height: 492
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f56b782687919490d95162238140e5d6
+      spriteID: 2c3b2ffa04f624f399ce28322e245ae9
       vertices: []
       indices: 
       edges: []
