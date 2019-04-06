@@ -1298,14 +1298,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6706249312742914002}
-  - component: {fileID: 6706249312742914003}
   - component: {fileID: 6706249312742913836}
   - component: {fileID: 6706249312742913837}
   - component: {fileID: 6706249312742913838}
   - component: {fileID: 6706249312742913839}
   - component: {fileID: 6706249312742913832}
-  - component: {fileID: 236206159}
   - component: {fileID: 6495084345341795099}
+  - component: {fileID: 547996435}
   m_Layer: 0
   m_Name: Mud
   m_TagString: Untagged
@@ -1342,22 +1341,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &6706249312742914003
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6706249312742913833}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.63
 --- !u!50 &6706249312742913836
 Rigidbody2D:
   serializedVersion: 4
@@ -1409,7 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41647635cf567b4b88cf143413f791f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 150
   jumpHeight: 8
   maxGroundDistance: 0.5
   maxJumpCount: 2
@@ -1450,36 +1433,6 @@ MonoBehaviour:
   - {fileID: 3299454552710002440}
   chargePerSecond: 2
   chargeClip: {fileID: 8300000, guid: 72f204851fd7c454f96762f85003d656, type: 3}
---- !u!60 &236206159
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6706249312742913833}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.18}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.1098884, y: 1.0122101}
-      - {x: -0.8183788, y: -0.31162208}
-      - {x: -0.5755753, y: -0.79680735}
-      - {x: 0.6122049, y: -0.78459734}
-      - {x: 0.89445794, y: -0.56871533}
 --- !u!95 &6495084345341795099
 Animator:
   serializedVersion: 3
@@ -1499,6 +1452,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &547996435
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6706249312742913833}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.27}
+  m_Size: {x: 1.14, y: 1.74}
+  m_Direction: 0
 --- !u!1001 &1142194376931446559
 PrefabInstance:
   m_ObjectHideFlags: 0
