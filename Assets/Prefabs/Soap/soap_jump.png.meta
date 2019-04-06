@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: b404f656fd6ef4ce4befc8b8c8e4bb65
+guid: 79f7c54db1e5949e8a9a11a62f90bcdc
 TextureImporter:
   fileIDToRecycleName:
-    21300000: mud_idle_0
-    21300002: mud_idle_1
-    21300004: mud_idle_2
-    21300006: mud_idle_3
-    21300008: mud_idle_4
-    21300010: mud_idle_5
-    21300012: mud_idle_6
-    21300014: mud_idle_7
+    21300000: soap_jump_0
+    21300002: soap_jump_1
+    21300004: soap_jump_2
+    21300006: soap_jump_3
+    21300008: soap_jump_4
+    21300010: soap_jump_5
+    21300012: soap_jump_6
+    21300014: soap_jump_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -81,12 +81,12 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 12
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 1
+    overridden: 0
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Android
@@ -114,93 +114,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mud_idle_0
+      name: soap_jump_0
       rect:
         serializedVersion: 2
-        x: 209
-        y: 2256
-        width: 601
-        height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d29dae68e0e04d8080f863a88b55581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mud_idle_1
-      rect:
-        serializedVersion: 2
-        x: 1238
-        y: 2243
-        width: 592
-        height: 635
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d42a11b9e660548c7b76858d0dc06b7f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mud_idle_2
-      rect:
-        serializedVersion: 2
-        x: 2253
-        y: 2235
-        width: 606
-        height: 649
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80689b092b44f401391a99c0728d7d08
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mud_idle_3
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 1208
-        width: 629
-        height: 665
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21e60a54ba37c4a5ca3dd52624bda35f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mud_idle_4
-      rect:
-        serializedVersion: 2
-        x: 1217
-        y: 1215
+        x: 191
+        y: 2331
         width: 644
-        height: 645
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,19 +128,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e3cf66faaba0479a83ffef249dd87fd
+      spriteID: c5cebe8d2182d4fad8f2891bdbc3129f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mud_idle_5
+      name: soap_jump_1
       rect:
         serializedVersion: 2
-        x: 2258
-        y: 1220
-        width: 607
-        height: 647
+        x: 1211
+        y: 2255
+        width: 659
+        height: 608
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,19 +148,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8745459186474016bae32f12ab09aaf
+      spriteID: 0ba4bdae86b02453582889d3a076fbc5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mud_idle_6
+      name: soap_jump_2
       rect:
         serializedVersion: 2
-        x: 209
-        y: 203
-        width: 610
-        height: 638
+        x: 2234
+        y: 2267
+        width: 662
+        height: 586
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,19 +168,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a75983115c2f4749b4a11a273d8e5dc
+      spriteID: 387efa9a701ce4951a89e58c2f9dc76d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mud_idle_7
+      name: soap_jump_3
       rect:
         serializedVersion: 2
-        x: 1241
-        y: 200
-        width: 593
-        height: 638
+        x: 224
+        y: 1221
+        width: 581
+        height: 631
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,7 +188,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94b3869c11e2c4cd98eed6803c24f0d7
+      spriteID: a0f68aa489bc340e38276d55b605540e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soap_jump_4
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1245
+        width: 620
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa35c25f1afb44509b788f53649faa42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soap_jump_5
+      rect:
+        serializedVersion: 2
+        x: 2264
+        y: 1226
+        width: 592
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ffb87d2b4bd4ec5bc013575dbb0e74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soap_jump_6
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 212
+        width: 682
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003b67d8c5d724872bea1ce250212404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soap_jump_7
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 296
+        width: 643
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d386921bf6f0c4cf0ad25d07fa45b333
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c2d5232509e8d4cf28d2f6e0e8358f44
+    spriteID: a10e2f994e15b4ad88da072deb7df957
     vertices: []
     indices: 
     edges: []

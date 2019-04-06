@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mud
+  m_Name: Soap
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsJumping
@@ -147,7 +147,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mud_idle
+  m_Name: soap_idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -161,7 +161,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7ebfc8b38a3624f5a9631adb6396b2f6, type: 2}
+  m_Motion: {fileID: 7400000, guid: 32fc275aa21ed42b4b89ad86047925c8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -174,7 +174,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mud_jump_low
+  m_Name: soap_jump_low
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -189,7 +189,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8b829c6c947eb4361a26b3e8a082bd59, type: 2}
+  m_Motion: {fileID: 7400000, guid: cecd939bfc7a5463cb9cdd556530c993, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -202,7 +202,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: mud_jump_high
+  m_Name: soap_jump_high
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -216,7 +216,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: acad2a84fc036449db0cd3967f346be2, type: 2}
+  m_Motion: {fileID: 7400000, guid: f9d7a1f7934944d3db22e229b15fefde, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
