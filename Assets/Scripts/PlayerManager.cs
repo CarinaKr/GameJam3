@@ -61,7 +61,7 @@ public class PlayerManager : MonoBehaviour
         }
         else if(obj==Objects.LARGE_OBJECT)
         {
-            audioSource.clip = splashLargerObject;
+            audioSource.clip =splashLargerObject;
             audioSource.Play();
             playerEnergy.DeductLargeObjectEnergy();
             hasCollectable = false;

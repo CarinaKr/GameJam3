@@ -26,7 +26,7 @@ public class PlayerEnergyManager : MonoBehaviour
 
     private IEnumerator Charge()
     {
-        float smootingTime = 1f;
+        float smootingTime = 0.5f;
         audioSource.clip = chargeClip;
         audioSource.loop = true;
         audioSource.Play();
