@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] [Range (0,1)] public int playerNumber;
     [SerializeField] private GameObject collectableSymbol;
     //[SerializeField] private float pointsForTile, pointsForLargeObject;
-    [SerializeField] private AudioClip pickUpCollectable;
+    [SerializeField] private AudioClip pickUpCollectable, splashLargerObject;
 
     private bool _hasCollectable;
     private PlayerEnergyManager playerEnergy;
@@ -61,6 +61,8 @@ public class PlayerManager : MonoBehaviour
         }
         else if(obj==Objects.LARGE_OBJECT)
         {
+            audioSource.clip = splashLargerObject;
+            audioSource.Play();
             playerEnergy.DeductLargeObjectEnergy();
             hasCollectable = false;
         }
