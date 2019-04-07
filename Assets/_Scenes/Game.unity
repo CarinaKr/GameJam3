@@ -629,6 +629,11 @@ PrefabInstance:
       propertyPath: splashLargerObject
       value: 
       objectReference: {fileID: 8300000, guid: 2629a075efcc10c41ad97d8c60d11068, type: 3}
+    - target: {fileID: 6706249312742913837, guid: dab942fb75e5e49c299d8f5cf47a6a41,
+        type: 3}
+      propertyPath: playerNumber
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6706249312742913838, guid: dab942fb75e5e49c299d8f5cf47a6a41,
         type: 3}
       propertyPath: speed
@@ -656,6 +661,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dab942fb75e5e49c299d8f5cf47a6a41, type: 3}
+--- !u!114 &236206158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6706249312742913837, guid: dab942fb75e5e49c299d8f5cf47a6a41,
+    type: 3}
+  m_PrefabInstance: {fileID: 236206157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547996434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6178a1f7127931e488b75b489d153e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &261508694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,8 +1768,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeGameOver: 0.5
-  musWinsClip: {fileID: 0}
-  soapWinsClip: {fileID: 0}
+  musWinsClip: {fileID: 8300000, guid: 293de7c9f2d73b549972fff0bd02e624, type: 3}
+  soapWinsClip: {fileID: 8300000, guid: f16e64728357d64409e2ccac097edb76, type: 3}
   bothLoseClip: {fileID: 8300000, guid: f058bdd73bcb05e4db0e252112076564, type: 3}
 --- !u!4 &819017534
 Transform:
@@ -3233,6 +3250,11 @@ PrefabInstance:
       propertyPath: splashLargerObject
       value: 
       objectReference: {fileID: 8300000, guid: 55a1f42ef5e238b4391a5e28dd90926f, type: 3}
+    - target: {fileID: 116280454155115442, guid: d283ce00e43de4183b8a78eccb20df78,
+        type: 3}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 116280454155115453, guid: d283ce00e43de4183b8a78eccb20df78,
         type: 3}
       propertyPath: speed
@@ -3255,6 +3277,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d283ce00e43de4183b8a78eccb20df78, type: 3}
+--- !u!114 &1485547068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 116280454155115442, guid: d283ce00e43de4183b8a78eccb20df78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1485547067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6178a1f7127931e488b75b489d153e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1534025343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3986,12 +4020,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef3579d28d1df14f9a1aab15e6008c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMud: {fileID: 0}
-  playerSoap: {fileID: 0}
+  playerMud: {fileID: 236206158}
+  playerSoap: {fileID: 1485547068}
   maxTime: 120
   timeText: {fileID: 1836520839}
   pointsForTile: 1
-  pointsForLargeObject: 2
+  pointsForLargeObject: 3
   winPercentage: 80
   tiles:
   - {fileID: 580095781}

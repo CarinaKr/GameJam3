@@ -931,8 +931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeGameOver: 0.5
-  musWinsClip: {fileID: 0}
-  soapWinsClip: {fileID: 0}
+  musWinsClip: {fileID: 8300000, guid: 293de7c9f2d73b549972fff0bd02e624, type: 3}
+  soapWinsClip: {fileID: 8300000, guid: f16e64728357d64409e2ccac097edb76, type: 3}
   bothLoseClip: {fileID: 8300000, guid: f058bdd73bcb05e4db0e252112076564, type: 3}
 --- !u!4 &1157122074
 Transform:
